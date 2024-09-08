@@ -311,7 +311,7 @@ a:link{
 
 /* image animation */
 @media (prefers-reduced-motion: no-preference){
-    .main-content img{
+    .image-animation{
         scale: .9; opacity: 0.5;
         animation: fade-in linear forwards;
         animation-timeline: view();
@@ -404,4 +404,10 @@ a:link{
     font-size: 24px;
     font-weight: 600;
     text-align: center;
+}
+
+/* project page images */
+.project-image{
+    height: 300px;
+    width: 550px;
 }
