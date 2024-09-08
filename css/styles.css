@@ -145,25 +145,17 @@ header{
 
 /* remove underline from nav links */
 .nav-item > a{
+    color: brown;
     text-decoration: none;
     transition: all;
     font-weight: 800;
-}
-
-/* visited links will have lighter salmon color */
-.nav-item > a:visited{
-    color: brown;
-}
-
-/* unvisited links */
-a:link{
-    color: var(--text-color);
 }
 
 /* links while being hovered over */
 .nav-item > a:hover{
     text-decoration: underline;
     text-underline-offset: 4px;
+    color: var(--text-color);
 }
 
 /*      HOME PAGE      */
@@ -408,6 +400,6 @@ a:link{
 
 /* project page images */
 .project-image{
-    height: 300px;
-    width: 550px;
+    height: 300px !important;
+    width: 550px !important;
 }
