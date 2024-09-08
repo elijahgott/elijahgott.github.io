@@ -1,0 +1,407 @@
+/* Created by: Elijah Gott */
+
+/* ALL PAGES / GENERAL */
+/* ------------------- */
+/* variables */
+:root{
+    /* colors current unused
+       rgb(49, 49, 49) -> dark gray 
+       rgb(250, 250, 250) -> slight off white
+       rgb(239, 241, 231) -> cream */
+    --background-color: rgb(239, 241, 231);
+    /* --text-color: rgb(255, 255, 255); */
+    --mustard-yellow: rgb(245, 178, 64);
+    --text-color: black;
+    --highlight: rgb(179, 233, 255);
+    --highlight: rgb(255, 160, 116);
+}
+
+.test-border{
+    border: solid 2px black;
+}
+
+/* background and font */
+html{
+    background-color: var(--background-color);
+    font-family: system-ui, sans-serif;
+    font-weight: normal;
+}
+
+/* body */
+/* resets the margin and padding to 0 so width: 100% is actually 100%, etc */
+body{
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+    color: var(--text-color);
+}
+
+/* place nav on top of all other elements */
+header{
+    z-index: 100 !important;
+}
+
+/* general container */
+.container{
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+/* container for nav */
+.nav-container{
+    z-index: 1000;
+    position: absolute;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+    background: var(--background-color);
+    box-shadow: 0px 0px 10px 0px lightgray;
+}
+
+/* nav unordered list */
+/* contains all the links in nav */
+.nav-list{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* nav links */
+.nav-item{
+    font-size: 25px !important;
+    color: brown;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align:left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* main content */
+/* make different width for different sized screens */
+.main-content{
+    margin-left: auto;
+    margin-right: auto;
+    min-height: calc(100vh - (64px + 5px + 40px)); /* 64px = nav height, 5px = margin above main-content, 40px extra idk why */
+    background-color: var(--background-color);
+    padding-top: calc(10px + 64px); /* 64px = nav height, 10px just preference */
+    padding-bottom: 30px;
+}
+
+/* huge text with red shadow */
+.title{
+    font-size: 64px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: white;
+    text-shadow: 5px 5px 0px brown;
+}
+
+/* slightly smaller title text with red shadow */
+.small-title{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: white;
+    text-shadow: 5px 5px 0px brown;
+}
+
+.small-title > a{
+    color: white;
+    text-decoration: none;
+}
+
+.small-title > a:hover{
+    text-decoration: underline;
+}
+
+/* add spacing between text and edge of main-content */
+.container > p, h1, h2, h3, h4, h5{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/* centers images in main-content */
+.container > img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* remove underline from nav links */
+.nav-item > a{
+    text-decoration: none;
+    transition: all;
+    font-weight: 800;
+}
+
+/* visited links will have lighter salmon color */
+.nav-item > a:visited{
+    color: brown;
+}
+
+/* unvisited links */
+a:link{
+    color: var(--text-color);
+}
+
+/* links while being hovered over */
+.nav-item > a:hover{
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/*      HOME PAGE      */
+/* ------------------- */
+/* title div */
+.title-container{
+    display: flex;
+    max-width: 60rem;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 16px;
+    background-color: var(--mustard-yellow);
+    border-radius: 15px;
+}
+
+/* title self-image */
+.title-container > .self-photo{
+    border-radius: 5%;
+    height: 300px;
+    width: auto;
+    margin-right: 16px;
+    box-shadow: 5px 5px 0px brown;
+}
+
+/* words about "Elijah Gott */
+.bio{
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+/* warning colors for work in progress sections */
+.wip{
+    border: solid var(--mustard-yellow);
+    margin-bottom: 16px;
+}
+
+/* work in progress section text */
+.wip > ul, .wip > li, .wip > p{
+    margin-left: 5%;
+}
+
+/* skills section of page */
+.skills-section{
+    /* background: linear-gradient(in lch, var(--background-color), var(--mustard-yellow) 5%, var(--mustard-yellow) 95%, var(--background-color)); background color to salmon to background color gradient */
+    background-color: var(--mustard-yellow);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* holds the skill divs */
+.skills-container{
+    display: flex;
+    max-width: 800px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    padding-block: 2rem;
+    -webkit-mask: linear-gradient(90deg, 
+                        transparent,
+                        white 20%, 
+                        white 80%,
+                        transparent);
+    mask: linear-gradient(90deg, 
+                        transparent,
+                        white 20%, 
+                        white 80%,
+                        transparent);
+}
+
+/* container for each skill */
+/* needed to prevent each skill element from moving at different speed */
+.skills-div{
+    width: max-content;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    animation: skills-scroll 60s linear infinite;
+}
+
+/* styling for skill divs */
+.skills{
+    color: var(--text-color);
+    list-style-type: none;
+    min-height: 5rem;
+    min-width: 6rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: var(--background-color);
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    align-content: center;
+    border-radius: 0.5rem;
+    box-shadow: 0.5rem 0.5rem 0 -0.25rem brown;
+    letter-spacing: 2px;
+}
+
+/* animation for skills scrolling */
+@keyframes skills-scroll{
+    to{
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}
+
+/* skills fade animation */
+@media (prefers-reduced-motion: no-preference){
+    .main-content .skills-container{
+        scale: 1; opacity: 1;
+        animation: fade-in linear forwards;
+        animation-timeline: view();
+        animation-range-start: cover;
+        animation-range-end: 200px;
+    }
+}
+
+/* TESTING ANIMATIONS FROM VIDEO */
+/* https://www.youtube.com/watch?v=UmzFk68Bwdk */
+
+/* for scroll progress animation
+.scroll-watcher{
+    height: 10px;
+    position: fixed;
+    left: -50%;
+    top: 0;
+    z-index: 1000;
+    background: brown;
+    width: 100%;
+    margin: 0%;
+    scale: 0 1;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll();
+}
+
+/* also for scroll progress animation */
+/* @keyframes scroll-watcher{
+    to{ scale: 2 1; }
+} */
+
+/* image animation */
+@media (prefers-reduced-motion: no-preference){
+    .main-content img{
+        scale: .9; opacity: 0.5;
+        animation: fade-in linear forwards;
+        animation-timeline: view();
+        animation-range-start: cover;
+        animation-range-end: 600px;
+    }
+
+    @keyframes fade-in{
+        to{scale: 1; opacity: 1;}
+    }
+}
+
+/*        RESUME PAGE         */
+/* resume */
+.resume-pdf-container{
+    padding-top: 16px;
+    width: fit-content;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* PROJECTS PAGE */
+/* whole project section excluding languages / tools / skills */
+.project{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    width: 80%; /* FIX: scale better for smaller screens */
+}
+
+/* project description */
+.project > div > p{
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* slightly smaller title text with for project names */
+.project-title{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: brown;
+    text-shadow: 5px 5px 0px var(--mustard-yellow);
+}
+
+.project-title > a{
+    color: brown;
+    text-decoration: none;
+}
+
+.project-title > a:hover{
+    text-decoration: underline;
+}
+
+/* container for languages / tools used section */
+.languages-container{
+    width: 100%;
+    background-color: var(--mustard-yellow);
+    margin-bottom: 16px;
+}
+
+/* content within languages section */
+.languages{
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+/* project skills title */
+.languages > h3{
+    text-align: center;
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: white;
+    text-shadow: 5px 5px 0px brown;
+}
+
+.languages > ul,li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
