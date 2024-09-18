@@ -51,6 +51,12 @@ header{
     padding-bottom: 16px;
 }
 
+/* paragraph within a general container */
+.container > p{
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
 /* container for nav */
 .nav-container{
     z-index: 1000;
@@ -163,13 +169,12 @@ header{
 /* title div */
 .title-container{
     display: flex;
-    max-width: 60rem;
+    width: 60rem;
     align-items: center;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     margin-top: 16px;
-    margin-bottom: 16px;
     padding: 16px;
     background-color: var(--mustard-yellow);
     border-radius: 15px;
@@ -184,24 +189,14 @@ header{
     box-shadow: 5px 5px 0px brown;
 }
 
-/* words about "Elijah Gott */
+/* words about "Elijah Gott"... */
 .bio{
-    margin-left: 2%;
-    margin-right: 2%;
+    letter-spacing: 1px;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-top: 0;
     font-weight: 400;
     font-size: 24px;
-}
-
-/* warning colors for work in progress sections */
-.wip{
-    border: solid var(--mustard-yellow);
-    margin-bottom: 16px;
-}
-
-/* work in progress section text */
-.wip > ul, .wip > li, .wip > p{
-    margin-left: 5%;
 }
 
 /* skills section of page */
@@ -215,7 +210,7 @@ header{
 /* holds the skill divs */
 .skills-container{
     display: flex;
-    max-width: 800px;
+    max-width: 80rem;
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
@@ -327,6 +322,12 @@ header{
 }
 
 /* PROJECTS PAGE */
+/* contains each project, including the project section and the languages */
+.project-spacer{
+    height: 50px;
+    /* border: dashed black 2px; */
+}
+
 /* whole project section excluding languages / tools / skills */
 .project{
     margin-left: auto;
@@ -349,17 +350,19 @@ header{
     text-align: center;
     font-size: 40px;
     margin-top: 0;
-    margin-bottom: 16px;
+    margin-bottom: 0;
     color: brown;
-    text-shadow: 5px 5px 0px var(--mustard-yellow);
+    /* text-shadow: 5px 5px 0px var(--mustard-yellow); */
 }
 
 .project-title > a{
     color: brown;
+    font-weight: bolder;
     text-decoration: none;
 }
 
 .project-title > a:hover{
+    color: black;
     text-decoration: underline;
 }
 
