@@ -169,7 +169,7 @@ header{
 /* title div */
 .title-container{
     display: flex;
-    width: 60rem;
+    max-width: 60rem;
     align-items: center;
     text-align: center;
     margin-left: auto;
@@ -183,10 +183,17 @@ header{
 /* title self-image */
 .title-container > .self-photo{
     border-radius: 5%;
-    height: 300px;
-    width: auto;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     margin-right: 16px;
     box-shadow: 5px 5px 0px brown;
+}
+
+/* title "ELIJAH GOTT" */
+.title-text{
+    width: fit-content;
+    padding-right: 16px;
 }
 
 /* words about "Elijah Gott"... */
@@ -234,7 +241,7 @@ header{
     display: flex;
     gap: 1rem;
     flex-wrap: nowrap;
-    animation: skills-scroll 60s linear infinite;
+    animation: skills-scroll 120s linear infinite;
 }
 
 /* styling for skill divs */
@@ -345,7 +352,23 @@ header{
     font-weight: 500;
 }
 
-/* slightly smaller title text with for project names */
+/* title text for project sections */
+.project-section, .project-section > a{
+    text-align: center;
+    font-size: 60px;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 3rem;
+    color: brown;
+    text-decoration: none;
+}
+
+.project-section > a:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+/* slightly smaller title text for project names */
 .project-title{
     text-align: center;
     font-size: 40px;
