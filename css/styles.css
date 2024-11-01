@@ -1,4 +1,61 @@
 /* Created by: Elijah Gott */
+/* might need to redo a lot of this to adjust sizes for different screen sizes */
+
+/* /* Smartphones (portrait and landscape) -----------
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+  /* Styles */
+/* } */
+
+
+/* Smartphones (landscape) -----------
+@media only screen 
+and (min-width : 321px) {
+  /* Styles */
+/* } */
+
+/* Smartphones (portrait) -----------
+@media only screen 
+and (max-width : 320px) {
+  /* Styles */
+/* } */
+
+/* iPads (portrait and landscape) -----------
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+  /* Styles */
+/* } */
+
+/* iPads (landscape) -----------
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+  /* Styles */
+/* } */
+
+/* iPads (portrait) -----------
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+  /* Styles */
+/* } */
+
+/* Desktops and laptops -----------
+@media only screen 
+and (min-width : 1224px) {
+  /* Styles */
+/* } */
+
+/* Large screens -----------
+@media only screen 
+and (min-width : 1824px) {
+  /* Styles */
+/* } */
+
 
 /* ALL PAGES / GENERAL */
 /* ------------------- */
@@ -83,7 +140,7 @@ header{
 
 /* nav links */
 .nav-item{
-    font-size: 25px !important;
+    font-size: 22px !important;
     color: brown;
     display: flex;
     align-items: center;
@@ -92,8 +149,8 @@ header{
     text-align:left;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
 }
 
 /* main content */
@@ -109,12 +166,21 @@ header{
 
 /* huge text with red shadow */
 .title{
-    font-size: 64px;
+    font-size: 56px;
     text-align: center;
     margin-top: 0;
     margin-bottom: 16px;
     color: white;
     text-shadow: 5px 5px 0px brown;
+}
+
+@media only screen and (min-width: 1000px) {
+    .nav-item{
+        font-size: 25px !important;
+    }
+    .title{
+        font-size: 64px;
+    }
 }
 
 /* slightly smaller title text with red shadow */
@@ -170,13 +236,13 @@ header{
 .title-container{
     display: flex;
     max-width: 60rem;
-    width: fit-content;
+    width: 90%;
     align-items: center;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     margin-top: 16px;
-    padding: 16px;
+    padding: 8px;
     background-color: var(--mustard-yellow);
     border-radius: 15px;
 }
@@ -198,13 +264,14 @@ header{
 
 /* title "ELIJAH GOTT" */
 .title-text{
-    font-size: 48px;
+    font-size: 36px;
     text-align: center;
     color: white;
     text-shadow: 5px 5px 0px brown;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 0.5rem;
 }
 
 /* words about "Elijah Gott"... */
@@ -214,7 +281,21 @@ header{
     margin-right: 5%;
     margin-top: 0;
     font-weight: 400;
-    font-size: 24px;
+    font-size: 16px;
+}
+
+/* desktops and laptops */
+/* 1000px is arbitrary number, could change */
+@media only screen and (min-width: 1000px){
+    .title-container{
+        padding: 16px;
+    }
+    .title-text{
+        font-size: 64px;
+    }
+    .bio{
+        font-size: 28px;
+    }
 }
 
 /* skills section of page */
@@ -259,18 +340,28 @@ header{
 .skills{
     color: var(--text-color);
     list-style-type: none;
-    min-height: 5rem;
-    min-width: 6rem;
+    min-height: 4rem;
+    min-width: 5rem;
     padding-left: 1rem;
     padding-right: 1rem;
     background-color: var(--background-color);
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 700;
     text-align: center;
     align-content: center;
     border-radius: 0.5rem;
     box-shadow: 0.5rem 0.5rem 0 -0.25rem brown;
     letter-spacing: 2px;
+}
+
+/* desktops and laptops */
+/* 1000px is arbitrary number, could change */
+@media only screen and (min-width: 1000px){
+    .skills{
+        font-size: 32px;
+        min-height: 5rem;
+        min-width: 6rem;
+    }
 }
 
 /* animation for skills scrolling */
@@ -290,29 +381,6 @@ header{
         animation-range-end: 200px;
     }
 }
-
-/* TESTING ANIMATIONS FROM VIDEO */
-/* https://www.youtube.com/watch?v=UmzFk68Bwdk */
-
-/* for scroll progress animation
-.scroll-watcher{
-    height: 10px;
-    position: fixed;
-    left: -50%;
-    top: 0;
-    z-index: 1000;
-    background: brown;
-    width: 100%;
-    margin: 0%;
-    scale: 0 1;
-    animation: scroll-watcher linear;
-    animation-timeline: scroll();
-}
-
-/* also for scroll progress animation */
-/* @keyframes scroll-watcher{
-    to{ scale: 2 1; }
-} */
 
 /* image animation */
 @media (prefers-reduced-motion: no-preference){
