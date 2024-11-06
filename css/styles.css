@@ -244,17 +244,18 @@ header{
     margin-top: 16px;
     padding: 8px;
     background-color: var(--mustard-yellow);
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 /* title self-image */
 .title-container > .self-photo{
-    border-radius: 5%;
+    border-radius: 0;
     width: 100%;
     max-width: 300px;
     height: auto;
     margin-right: 16px;
     box-shadow: 5px 5px 0px brown;
+    border: 2px solid brown;
 }
 
 /* holds title "ELIJAH GOTT" and bio thing */
@@ -397,30 +398,26 @@ header{
     }
 }
 
-/*        RESUME PAGE         */
-/* resume */
-.resume-pdf-container{
-    padding-top: 16px;
-    width: fit-content;
-    height: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* PROJECTS PAGE */
+/*        PROJECT PAGE         */
 /* contains each project, including the project section and the languages */
 .project-spacer{
-    height: 50px;
+    height: 24px;
     /* border: dashed black 2px; */
 }
 
 /* whole project section excluding languages / tools / skills */
 .project{
+    padding-top: 8px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    width: 80%; /* FIX: scale better for smaller screens */
+    padding-left: 4px;
+    padding-right: 4px;
+    max-width: 90%;
+    width: fit-content;
+    overflow: auto;
 }
 
 /* project description */
@@ -431,26 +428,28 @@ header{
     font-weight: 500;
 }
 
-/* title text for project sections */
-.project-section, .project-section > a{
-    text-align: center;
-    font-size: 60px;
-    font-weight: 800;
-    margin-top: 0;
-    margin-bottom: 3rem;
-    color: brown;
-    text-decoration: none;
+/* holds the title for each section (major, minor) */
+.project-section-container{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    border-top: 2px dashed brown;
+    border-bottom: 2px dashed brown;
+    justify-content: center;
 }
 
-.project-section > a:hover{
-    color: black;
-    text-decoration: underline;
+/* title text for project sections */
+.project-section{
+    font-size: 44px;
+    font-weight: 800;
+    color: brown;
+    text-align: center;
 }
 
 /* slightly smaller title text for project names */
 .project-title{
     text-align: center;
-    font-size: 40px;
+    font-size: 32px;
     margin-top: 0;
     margin-bottom: 0;
     color: brown;
@@ -468,6 +467,13 @@ header{
     text-decoration: underline;
 }
 
+/* project page images */
+.project-image{
+    height: auto;
+    width: 100%;
+    border: 2px solid brown;
+}
+
 /* container for languages / tools used section */
 .languages-container{
     width: 100%;
@@ -477,7 +483,8 @@ header{
 
 /* content within languages section */
 .languages{
-    width: 25%;
+    width: 90%;
+    max-width: 30rem;
     margin-left: auto;
     margin-right: auto;
     padding-top: 16px;
@@ -503,8 +510,95 @@ header{
     text-align: center;
 }
 
-/* project page images */
-.project-image{
-    height: 300px !important;
-    width: 550px !important;
+/* 1000px is arbitrary number, could change */
+@media only screen and (min-width: 1000px){
+    .project-section{
+        font-size: 60px;
+    }
+    .project{
+        flex-wrap: nowrap;
+        margin-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .project-title{
+        font-size: 40px;
+    }
+    .project-image{
+        height: 300px;
+        width: 500px;
+    }
+    .project-spacer{
+        height: 40px;
+    }
+}
+
+/*        RESUME PAGE         */
+/* resume */
+.resume-container{
+    display: flex;
+    padding-top: 8px;
+    width: 94%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* resume png */
+.resume-image{
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8px;
+    border: 2px solid brown;
+    box-shadow: 5px 5px 0px brown;
+}
+
+.button-container{
+    display: flex;
+    padding-bottom: 8px;
+    width: 94%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button{
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    background-color: var(--mustard-yellow);
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border: 2px solid brown;
+    box-shadow: 5px 5px 0px brown;
+}
+
+.button:hover{
+    background-color: brown;
+    border: 2px solid var(--mustard-yellow);
+    box-shadow: 5px 5px 0px var(--mustard-yellow);
+}
+
+/* 1000px is arbitrary number, could change */
+@media only screen and (min-width: 1000px){
+    .resume-container{
+        padding-top: 16px;
+        padding-bottom: 0;
+        width: 52rem;
+    }
+    .button-container{
+        padding-top: 0;
+        padding-bottom: 0;
+        width: 52rem;
+    }
+    .button{
+        width: 50%;
+
+    }
 }
