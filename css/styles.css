@@ -399,6 +399,57 @@ header{
 }
 
 /*        PROJECT PAGE         */
+/* sticky side nav for projects */
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100%;
+    background-color: var(--background-color);
+    box-shadow: 0px 0px 10px 0px lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* reset padding and margins for sidebar */
+.sidebar > nav > ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-project-section > li{
+    display: block;
+    text-decoration: none;
+    padding-top: 8px;
+}
+
+.nav-project-section > li > a{
+    display: block;
+    color: brown;
+    font-weight: 700;
+    text-decoration: none;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.nav-project-section > li > a:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+.nav-project-section{
+    padding-bottom: 24px;
+}
+
+.nav-project{
+    font-size: 20px;
+    text-align: right;
+}
+
 /* contains each project, including the project section and the languages */
 .project-spacer{
     height: 24px;
