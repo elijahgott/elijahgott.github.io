@@ -241,7 +241,7 @@ footer > h1{
     padding-top: 16px;
     margin: 0;
     text-align: center;
-    font-size: 36px;
+    font-size: 32px;
     letter-spacing: 2px;
 }
 
@@ -249,7 +249,7 @@ footer > h1{
     margin-left: auto;
     margin-right: auto;
     color: var(--background-color);
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     padding-top: 4px;
     padding-bottom: 16px;
@@ -457,7 +457,7 @@ footer > h1{
 
 /* desktops and laptops */
 /* 1000px is arbitrary number, could change */
-@media only screen and (min-width: 1000px){
+@media only screen and (min-width: 1920px){
     .sidebar{
         display:flex;
     }
@@ -703,6 +703,54 @@ footer > h1{
     }
     .button{
         width: 50%;
-
     }
+}
+
+/*        TO-DO PAGE         */
+/*   separated todo and website-todo so that   */
+/* querySelector won't select the website list */
+.todo, .website-todo{
+    position: relative;
+    background-color: var(--mustard-yellow);
+    box-shadow: 5px 5px 0px brown;
+    min-height: 300px;
+    min-width: 20rem;
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 32px;
+    padding-top: 8px;
+    /* to center the list */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo > .project-title, .website-todo > .project-title{
+    position: absolute;
+    top: 0;
+    padding-top: 8px;
+}
+
+.tasks-list, .website-tasks-list{
+    padding-top: 28px;
+    padding-bottom: 32px;
+    padding-left: 0;
+}
+
+/* input button for todo list */
+.add-task{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 8px;
+}
+
+/* text box and button for adding task */
+.add-task > input{
+    padding: 8px;
 }

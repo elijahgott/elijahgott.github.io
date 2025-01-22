@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>To-Do List - Elijah Gott</title>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../projects/projects.html">PROJECTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../resume/resume.html">RESUME</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="main-content">
+        <!-- website todo -->
+        <div class="website-todo">
+            <h1 class="project-title">WEBSITE TODO</h1>
+            <ul class="website-tasks-list">
+                <li>
+                    <input type="checkbox" data-index=1 id="task1" checked disabled/>
+                    <label for="task1">Create Todo list</label>
+                </li>
+                <li>
+                    <input type="checkbox" data-index=1 id="task1" checked disabled/>
+                    <label for="task1">Fix sidebar on projects page</label>
+                </li>
+                <li>
+                    <input type="checkbox" data-index=1 id="task1" disabled/>
+                    <label for="task1">Make projects page less cluttered</label>
+                </li>
+            </ul>
+        </div>
+        <!-- functional, local todo -->
+        <div class="todo">
+            <h1 class="project-title">LOCAL TODO</h1>
+            <ul class="tasks-list">
+                <li>Nothing to do...</li>
+            </ul>
+            <form class="add-task">
+                <input type="text" name="task" placeholder="Task Name" required>
+                <input type="submit" value="+ Add Task">
+            </form>
+        </div>
+</div>
+<footer>
+    <h1>CONTACT ME:</h1>
+    <table class="contact-table">
+        <tr>
+            <td class="left">Email:</td>
+            <td class="right">elijahgott@icloud.com</td>
+        </tr>
+        <tr>
+            <td class="left">LinkedIn:</td>
+            <td class="right"><a href="https://www.linkedin.com/in/elijah-gott/">elijah-gott</a></td>
+        </tr>
+        <tr>
+            <td class="left">GitHub:</td>
+            <td class="right"><a href="https://github.com/elijahgott">elijahgott</a></td>
+        </tr>
+    </table>
+</footer>
+</body>
+<script type="text/javascript">
+    const addTasks = document.querySelector('.add-task');
+    const tasksList = document.querySelector('.tasks-list');
+    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+    addTasks.addEventListener('submit', addTask);
+    tasksList.addEventListener('click', toggleComplete);
+    populateList(tasks, tasksList);
+
+    function addTask(e){
+        e.preventDefault();
+        const name = (this.querySelector('[name=task]')).value;
+        const task = {
+            name,
+            done: false
+        };
+        tasks.push(task);
+        populateList(tasks, tasksList);
+        
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+        this.reset();
+    }
+
+    function populateList(tasks = [], tasksList){
+        if(tasks.length == 0) return;
+        tasksList.innerHTML = tasks.map((task, i) => {
+            return `
+                <li>
+                    <input type="checkbox" data-index=${i} id="task${i}" ${task.done ? 'checked' : ''}/>
+                    <label for="task${i}">${task.name}</label>
+                </li>
+            `;
+        }).join('');
+    }
+
+    function toggleComplete(e){
+        if(!e.target.matches('input')){
+            return;
+        }
+        else{
+            const box = e.target;
+            const index = box.dataset.index;
+            tasks[index].done = !tasks[index].done;
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            populateList(tasks, tasksList);
+        }
+    }
+</script>
+</html>
