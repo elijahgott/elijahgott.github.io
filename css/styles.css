@@ -269,10 +269,12 @@ footer > h1{
 
 .right > a{
     color: var(--background-color);
+    text-decoration: none;
 }
 
 .right > a:hover{
-    color: black;
+    color: var(--mustard-yellow);
+    text-decoration: underline;
 }
 
 /*      HOME PAGE      */
@@ -498,15 +500,15 @@ footer > h1{
 .sidebar{
     display: none;
     position: fixed;
+    z-index: 2000;
     top: 0;
     left: 0;
     width: auto;
-    height: 100%;
-    background-color: var(--background-color);
-    box-shadow: 0px 0px 10px 0px lightgray;
+    height: 100dvh;
+    background-color: brown;
+    box-shadow: 0px 0px 10px 0px darkred;
     justify-content: center;
     align-items: center;
-    text-align: center;
 }
 
 /* desktops and laptops */
@@ -532,7 +534,7 @@ footer > h1{
 
 .nav-project-section > li > a{
     display: block;
-    color: brown;
+    color: var(--background-color);
     font-weight: 700;
     text-decoration: none;
     padding-left: 16px;
@@ -540,7 +542,7 @@ footer > h1{
 }
 
 .nav-project-section > li > a:hover{
-    color: black;
+    color: var(--mustard-yellow);
     text-decoration: underline;
 }
 
@@ -559,17 +561,15 @@ footer > h1{
 
 /* whole project section excluding languages / tools / skills */
 .project{
-    padding-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding-left: 4px;
-    padding-right: 4px;
-    max-width: 90%;
-    width: fit-content;
-    overflow: auto;
+    overflow: wrap;
+    max-width: 60rem;
+    width: 90%;
+    background-color: var(--mustard-yellow);
+    border-radius: 5px;
 }
 
 /* project description */
@@ -585,18 +585,19 @@ footer > h1{
     display: flex;
     width: 100%;
     height: fit-content;
-    border-top: 2px dashed brown;
-    border-bottom: 2px dashed brown;
     justify-content: center;
     padding: 2rem 0;
+    background-color: var(--mustard-yellow);
 }
 
 /* title text for project sections */
 .project-section{
     font-size: 44px;
     font-weight: 800;
-    color: brown;
+    color: var(--background-color);
+    text-shadow: 5px 5px 0px brown;
     text-align: center;
+    
 }
 
 /* slightly smaller title text for project names */
@@ -604,8 +605,6 @@ footer > h1{
     text-align: center;
     font-size: 32px;
     font-weight: 600;
-    margin-top: 0;
-    margin-bottom: 0;
     color: brown;
 }
 
@@ -613,9 +612,8 @@ footer > h1{
     text-align: center;
     font-size: 24px;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
     color: brown;
-    /* text-shadow: 5px 5px 0px var(--mustard-yellow); */
 }
 
 .project-title > a, .project-subtitle > a{
@@ -632,14 +630,17 @@ footer > h1{
 /* project page images */
 .project-image{
     height: auto;
-    width: 100%;
+    width: 95%;
     border: 2px solid brown;
+    margin: 0.5rem 1rem;
 }
 
 /* container for languages / tools used section */
 .languages-container{
     width: 100%;
-    background-color: var(--mustard-yellow);
+    padding: 1rem 0;
+    border-top: 2px dashed brown;
+    border-bottom: 2px dashed brown;
     margin: 32px 0;
 }
 
@@ -660,8 +661,7 @@ footer > h1{
     font-weight: 700;
     margin-top: 0;
     margin-bottom: 16px;
-    color: white;
-    text-shadow: 4px 4px 0px brown;
+    color: brown;
 }
 
 .languages > ul,li{
@@ -671,6 +671,17 @@ footer > h1{
     font-size: 24px;
     font-weight: 600;
     text-align: center;
+}
+
+.back-button{
+    font-size: 16px;
+    color: brown;
+    text-decoration: none;
+}
+
+.back-button:hover{
+    color: black;
+    text-decoration: underline;
 }
 
 /* 1000px is arbitrary number, could change */
@@ -789,6 +800,9 @@ footer > h1{
     position: absolute;
     top: 0;
     padding-top: 8px;
+    color: white;
+    text-shadow: 4px 4px 0px brown;
+    font-weight: 700;
 }
 
 .tasks-list, .website-tasks-list{
