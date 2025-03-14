@@ -9,9 +9,7 @@
 
 <body>
 
-    <header>
-        <div class="scroll-watcher"></div>
-        
+    <header>        
         <div class="nav-container">
             <nav class="nav">
                 <ul class="nav-list">
@@ -30,12 +28,12 @@
     </header>
     
     
-    <div class="main-content">
+    <main class="main-content">
         <div class="title-container">
             <img class="self-photo" src="images/self-image.jpg" alt="photo of young Elijah (me)"/>
             <div class="title-text-container">
                 <h1 class="title-text">ELIJAH GOTT</h1>
-                <p class="bio">Computer Scientist with experience in full-stack and web development, with a passion for problem solving.</p>
+                <p class="bio">Computer Scientist with experience in full-stack and web development, and a love for problem solving.</p>
             </div>
         </div>
 
@@ -45,12 +43,14 @@
 
         <div class="skills-section">
             <h1 class="title">SKILLS</h1>
-            <ul class="skills-container">
+            <ul class="skills-container visible">
                 <div class="skills-div">
                     <li class="skills">Java</li>
                     <li class="skills">JavaScript</li>
+                    <li class="skills">SQL</li>
                     <li class="skills">MongoDB</li>
                     <li class="skills">C/C++</li>
+                    <li class="skills">C#</li>
                     <li class="skills">HTML</li>
                     <li class="skills">CSS</li>
                     <li class="skills">TailwindCSS</li>
@@ -61,8 +61,10 @@
                     <!-- had to double for animation, could use JS to avoid doubling -->
                     <li class="skills">Java</li>
                     <li class="skills">JavaScript</li>
+                    <li class="skills">SQL</li>
                     <li class="skills">MongoDB</li>
                     <li class="skills">C/C++</li>
+                    <li class="skills">C#</li>
                     <li class="skills">HTML</li>
                     <li class="skills">CSS</li>
                     <li class="skills">TailwindCSS</li>
@@ -72,8 +74,30 @@
                     <li class="skills">SDL</li>
                 </div>
             </ul>
+
+            <ul class="static-skills-container hidden">
+                <div class="static-skills-div">
+                    <li class="skills">Java</li>
+                    <li class="skills">JavaScript</li>
+                    <li class="skills">SQL</li>
+                    <li class="skills">MongoDB</li>
+                    <li class="skills">C/C++</li>
+                    <li class="skills">C#</li>
+                    <li class="skills">HTML</li>
+                    <li class="skills">CSS</li>
+                    <li class="skills">TailwindCSS</li>
+                    <li class="skills">Git</li>
+                    <li class="skills">ReactJS</li>
+                    <li class="skills">MySQL</li>
+                    <li class="skills">SDL</li>
+                </div>
+            </ul>
+
+            <div class="toggle-skills-div">
+                <input class="toggle-skills-list" id="toggle-skills-list" name="toggle-skills-list" type="checkbox"><label for="toggle-skills-list">Show Static List</label>
+            </div>
         </div>
-    </div>
+    </main>
     <footer>
         <h1>CONTACT ME:</h1>
         <table class="contact-table">
@@ -92,4 +116,27 @@
         </table>
     </footer>
 </body>
+<script>
+    var listCheckbox = document.querySelector('.toggle-skills-list');
+    listCheckbox.addEventListener('click', () => {
+        if(listCheckbox.checked){
+            const staticList = document.querySelector('.static-skills-container');
+            staticList.classList.remove('hidden');
+            staticList.classList.add('visible');
+
+            const scrollingList = document.querySelector('.skills-container');
+            scrollingList.classList.remove('visible');
+            scrollingList.classList.add('hidden');
+        }
+        else{
+            const staticList = document.querySelector('.static-skills-container');
+            staticList.classList.remove('visible');
+            staticList.classList.add('hidden');
+
+            const scrollingList = document.querySelector('.skills-container');
+            scrollingList.classList.remove('hidden');
+            scrollingList.classList.add('visible');
+        }
+    })
+</script>
 </html>

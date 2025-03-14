@@ -355,12 +355,10 @@ footer > h1{
 
 /* holds the skill divs */
 .skills-container{
-    display: flex;
-    max-width: 80rem;
+    max-width: 90rem;
     overflow: hidden;
-    margin-left: auto;
-    margin-right: auto;
-    padding-block: 2rem;
+    margin: 0 auto;
+    padding: 2rem 0;
     -webkit-mask: linear-gradient(90deg, 
                         transparent,
                         white 20%, 
@@ -373,6 +371,32 @@ footer > h1{
                         transparent);
 }
 
+.static-skills-container{
+    max-width: 90rem;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 2rem 0;
+    -webkit-mask: linear-gradient(90deg, 
+                        transparent,
+                        white 20%, 
+                        white 80%,
+                        transparent);
+    mask: linear-gradient(90deg, 
+                        transparent,
+                        white 20%, 
+                        white 80%,
+                        transparent);
+}
+
+/* used for button to toggle scrolling or static skills lists */
+.hidden{
+    display: none;
+}
+
+.visible{
+    display: flex;
+}
+
 /* container for each skill */
 /* needed to prevent each skill element from moving at different speed */
 .skills-div{
@@ -381,6 +405,16 @@ footer > h1{
     gap: 1.5rem;
     flex-wrap: nowrap;
     animation: skills-scroll 90s linear infinite;
+}
+
+.static-skills-div{
+    display: flex;
+    width: max-content;
+    padding: 0 10%;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 /* styling for skill divs */
@@ -401,6 +435,17 @@ footer > h1{
     letter-spacing: 2px;
 }
 
+/* center skills checkbox div */
+.toggle-skills-div{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.toggle-skills-div > label{
+    font-size: 16px;
+    font-weight: 600;
+}
+
 /* desktops and laptops */
 /* 1000px is arbitrary number, could change */
 @media only screen and (min-width: 1000px){
@@ -408,6 +453,10 @@ footer > h1{
         font-size: 32px;
         min-height: 5rem;
         min-width: 6rem;
+    }
+
+    .toggle-skills-div > label{
+        font-size: 20px;
     }
 }
 
