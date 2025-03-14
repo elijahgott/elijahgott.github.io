@@ -113,6 +113,8 @@ header{
 .container > p{
     letter-spacing: 1px;
     font-weight: 400;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
 }
 
 /* container for nav */
@@ -168,6 +170,7 @@ header{
 /* huge text with red shadow */
 .title{
     font-size: 56px;
+    font-weight: 700;
     text-align: center;
     margin-top: 0;
     margin-bottom: 16px;
@@ -205,8 +208,9 @@ header{
 
 /* add spacing between text and edge of main-content */
 .container > p, h1, h2, h3, h4, h5{
-    margin-left: 5%;
-    margin-right: 5%;
+    width: 75%;
+    margin: 0 auto;
+    font-weight: 500;
 }
 
 /* centers images in main-content */
@@ -239,7 +243,7 @@ footer{
 
 footer > h1{
     padding-top: 16px;
-    margin: 0;
+    margin: 0 auto;
     text-align: center;
     font-size: 32px;
     letter-spacing: 2px;
@@ -307,6 +311,7 @@ footer > h1{
 /* title "ELIJAH GOTT" */
 .title-text{
     font-size: 36px;
+    font-weight: 700;
     text-align: center;
     color: white;
     text-shadow: 5px 5px 0px brown;
@@ -322,7 +327,7 @@ footer > h1{
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 0;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
 }
 
@@ -373,7 +378,7 @@ footer > h1{
 .skills-div{
     width: max-content;
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     flex-wrap: nowrap;
     animation: skills-scroll 90s linear infinite;
 }
@@ -391,8 +396,8 @@ footer > h1{
     font-weight: 700;
     text-align: center;
     align-content: center;
-    border-radius: 0.5rem;
-    box-shadow: 0.5rem 0.5rem 0 -0.25rem brown;
+    border-radius: 0.2rem;
+    box-shadow: 0.6rem 0.6rem 0 -0.25rem brown;
     letter-spacing: 2px;
 }
 
@@ -499,19 +504,13 @@ footer > h1{
     text-align: right;
 }
 
-/* contains each project, including the project section and the languages */
-.project-spacer{
-    height: 24px;
-    /* border: dashed black 2px; */
-}
-
 #major-projects{
     scroll-behavior: smooth;
 }
 
 /* whole project section excluding languages / tools / skills */
 .project{
-    padding-top: 8px;
+    padding-top: 20px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -540,6 +539,7 @@ footer > h1{
     border-top: 2px dashed brown;
     border-bottom: 2px dashed brown;
     justify-content: center;
+    padding: 2rem 0;
 }
 
 /* title text for project sections */
@@ -554,19 +554,28 @@ footer > h1{
 .project-title{
     text-align: center;
     font-size: 32px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: brown;
+}
+
+.project-subtitle{
+    text-align: center;
+    font-size: 24px;
     margin-top: 0;
     margin-bottom: 0;
     color: brown;
     /* text-shadow: 5px 5px 0px var(--mustard-yellow); */
 }
 
-.project-title > a{
+.project-title > a, .project-subtitle > a{
     color: brown;
     font-weight: bolder;
     text-decoration: none;
 }
 
-.project-title > a:hover{
+.project-title > a:hover, .project-subtitle > a:hover{
     color: black;
     text-decoration: underline;
 }
@@ -582,7 +591,7 @@ footer > h1{
 .languages-container{
     width: 100%;
     background-color: var(--mustard-yellow);
-    margin-bottom: 16px;
+    margin: 32px 0;
 }
 
 /* content within languages section */
@@ -599,10 +608,11 @@ footer > h1{
 .languages > h3{
     text-align: center;
     font-size: 32px;
+    font-weight: 700;
     margin-top: 0;
     margin-bottom: 16px;
     color: white;
-    text-shadow: 5px 5px 0px brown;
+    text-shadow: 4px 4px 0px brown;
 }
 
 .languages > ul,li{

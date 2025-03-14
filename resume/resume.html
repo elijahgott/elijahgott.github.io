@@ -32,7 +32,7 @@
         </div>
         <div class="button-container">
             <a class="button" href="./Resume.pdf" download="Resume">DOWNLOAD PDF</a>
-            <a class="button" href="#hireme">HIRE ME</a>
+            <a class="button" id="hireme">HIRE ME</a>
         </div>
     </div>
     <footer>
@@ -53,4 +53,10 @@
         </table>
     </footer>
 </body>
+<script>
+    const hire = document.querySelector('#hireme');
+    hire.addEventListener('click', () =>  {
+        alert("Please I'm begging");
+    })
+</script>
 </html>
