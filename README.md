@@ -1,2 +1,2 @@
-# Personal Website for Elijah Gott :)
-Trying to see what I can do using only HTML and CSS, will likely incorporate JavaScript later.
+# Personal Website for Elijah Gott
+Intended as a portfolio website to showcase the projects that I have built and skills that I have learned over the years.
