@@ -178,9 +178,9 @@ header{
 }
 
 footer{
-    border-top: 8px solid brown;
+    border-top: 4px solid var(--text-color);
     padding: 32px 0;
-    color: brown;
+    color: var(--text-color);
     background-color: var(--background-color);
     height: fit-content;
 }
@@ -292,10 +292,9 @@ footer > h1{
 
 /* skills section of page */
 .skills-section{
-    /* background: linear-gradient(in lch, var(--background-color), var(--mustard-yellow) 5%, var(--mustard-yellow) 95%, var(--background-color)); background color to salmon to background color gradient */
     background-color: var(--mustard-yellow);
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 40px;
+    padding-bottom: 32px;
 }
 
 /* holds the skill divs */
