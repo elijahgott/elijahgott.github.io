@@ -120,6 +120,15 @@ header{
     text-shadow: 5px 5px 0px brown;
 }
 
+.small-title-black{
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    color: black;
+}
+
 @media only screen and (min-width: 1000px) {
     .nav-item{
         font-size: 25px !important;
@@ -273,7 +282,17 @@ footer > h1{
     margin-right: 5%;
     margin-top: 0;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 20px;
+}
+
+.long-bio{
+    text-indent: 8px;
+    letter-spacing: 1px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0;
+    font-weight: 500;
+    font-size: 20px;
 }
 
 /* desktops and laptops */
