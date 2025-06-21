@@ -186,6 +186,7 @@ header{
     color: var(--text-color);
 }
 
+/* styling for footer at the bottom of most pages */
 footer{
     border-top: 4px solid var(--text-color);
     padding: 32px 0;
@@ -579,7 +580,7 @@ footer > h1{
     color: brown;
 }
 
-.project-title > a, .project-subtitle > a{
+.project-title > a, .project-subtitle > a, .project-nolink{
     color: brown;
     font-weight: bolder;
     text-decoration: none;
