@@ -29,12 +29,17 @@
     
     
     <main class="main-content">
+        <section class="landing"></section>
+        <div class="landing-title-text-container">
+            <h1 class="title-text">ELIJAH GOTT</h1>
+            <p class="bio">Aspiring <strong>Junior Software Developer</strong>, focused on <strong>Front-End Development</strong>.</p>
+        </div>
+
         <section class="title-container">
             <img class="self-photo" src="images/self-image.jpg" alt="photo of young Elijah (me)"/>
             <div class="title-text-container">
                 <h1 class="title-text">ELIJAH GOTT</h1>
                 <p class="bio">Aspiring <strong>Junior Software Developer</strong>, focused on <strong>Front-End Development</strong>.</p>
-                <p></p>
             </div>
         </section>
 
@@ -113,7 +118,7 @@
     </footer>
 </body>
 <script>
-    var listCheckbox = document.querySelector('.toggle-skills-list');
+    let listCheckbox = document.querySelector('.toggle-skills-list');
     listCheckbox.addEventListener('click', () => {
         if(listCheckbox.checked){
             const staticList = document.querySelector('.static-skills-container');
@@ -134,5 +139,11 @@
             scrollingList.classList.add('visible');
         }
     })
+
+    const landing = document.querySelector('.landing')
+
+    window.onload = () => {
+        landing.classList.add('animation')
+    }
 </script>
 </html>
