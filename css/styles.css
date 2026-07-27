@@ -106,7 +106,6 @@ header{
     background-color: var(--background-color);
     padding-top: calc(10px + 64px); /* 64px = nav height, 10px just preference */
     padding-bottom: 0;
-    line-height: 32px;
 }
 
 /* huge text with red shadow */
@@ -263,11 +262,13 @@ footer > h1{
 
 /* holds title "ELIJAH GOTT" and bio thing */
 .title-text-container{
+    margin: 0 auto;
     width: fit-content;
 }
 
 /* title "ELIJAH GOTT" */
 .title-text{
+    width: fit-content;
     font-size: 36px;
     font-weight: 700;
     text-align: center;
@@ -550,7 +551,7 @@ footer > h1{
     width: 100%;
     height: fit-content;
     justify-content: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
     background-color: var(--mustard-yellow);
 }
 
@@ -561,7 +562,8 @@ footer > h1{
     color: var(--background-color);
     text-shadow: 5px 5px 0px brown;
     text-align: center;
-    
+    vertical-align: center;
+    margin-bottom: 4px; /* helps make text seem better centered bc of shadow */
 }
 
 /* slightly smaller title text for project names */
